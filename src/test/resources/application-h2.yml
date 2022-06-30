@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: false
+logging:
+  level:
+    root: INFO
+    io:
+      github.aliothliu: DEBUG
+# rbac marble
+marble:
+  rbac:
+    web:
+      prefix: api
+    jpa:
+      ruleTableName: rbac_rule
+      roleTableName: rbac_role
+      menuTableName: rbac_menu
+      menuPathTableName: rbac_menu_path
+      pageTableName: rbac_page
+      pageElementTableName: rbac_page_element
+      pageElementRefTableName: rbac_ref_page_element
+pebble:
+  security:
+    authentication:
+      jwt:
+        secret: eF4#bP0}cW0(cE1+eA4|uB03
+        base64Secret: eF4#bP0}cW0(cE1+eA4|uB02
+        tokenValidityInSeconds: 43200
+        tokenValidityInSecondsForRememberMe: 43200

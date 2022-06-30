@@ -1,0 +1,8 @@
+pebble:
+  security:
+    authentication:
+      jwt:
+        secret: eF4#bP0}cW0(cE1+eA4|uB03
+        base64Secret: eF4#bP0}cW0(cE1+eA4|uB02
+        tokenValidityInSeconds: 43200
+        tokenValidityInSecondsForRememberMe: 43200
